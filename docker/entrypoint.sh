@@ -29,4 +29,6 @@ php artisan storage:link || true
 
 chown -R www-data:www-data storage bootstrap/cache database
 
+php artisan schedule:work > /tmp/scheduler.log 2>&1 &
+
 exec "$@"

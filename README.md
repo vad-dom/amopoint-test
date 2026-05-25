@@ -75,24 +75,26 @@
     <strong>Собрать и запустить контейнер:</strong>
     <pre><code>docker compose up -d --build</code></pre>
 
-При запуске автоматически:
-
-<ul>
-  <li>Соберется Docker image приложения</li>
-  <li>Создастся <code>.env</code> из <code>.env.example</code></li>
-  <li>Установятся PHP-зависимости через Composer</li>
-  <li>Установятся Node.js зависимости</li>
-  <li>Сгенерируется APP_KEY</li>
-  <li>Создастся SQLite база данных</li>
-  <li>Выполнятся миграции</li>
-  <li>Заполнятся тестовые данные (seeders)</li>
-  <li>Настроятся права доступа Laravel</li>
-  <li>Запустится scheduler Laravel</li>
-  <li>Соберутся frontend assets через Vite</li>
-  <li>Запустится Apache внутри контейнера</li>
-</ul>
+    При запуске автоматически:
+    
+    <ul>
+      <li>Соберется Docker image приложения</li>
+      <li>Создастся <code>.env</code> из <code>.env.example</code></li>
+      <li>Установятся PHP-зависимости через Composer</li>
+      <li>Установятся Node.js зависимости</li>
+      <li>Сгенерируется APP_KEY</li>
+      <li>Создастся SQLite база данных</li>
+      <li>Выполнятся миграции</li>
+      <li>Заполнятся тестовые данные (seeders)</li>
+      <li>Настроятся права доступа Laravel</li>
+      <li>Запустится scheduler Laravel</li>
+      <li>Соберутся frontend assets через Vite</li>
+      <li>Запустится Apache внутри контейнера</li>
+    </ul>
   </li>
-
+  
+  <br>
+  
   <li>
     <strong>Приложение будет доступно по адресу:</strong>
     <pre><code>http://localhost:8080</code></pre>

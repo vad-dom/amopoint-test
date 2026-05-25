@@ -74,9 +74,7 @@
   <li>
     <strong>Собрать и запустить контейнер:</strong>
     <pre><code>docker compose up -d --build</code></pre>
-
     <p>При запуске автоматически:</p>
-    
     <ul>
       <li>Соберется Docker image приложения</li>
       <li>Создастся <code>.env</code> из <code>.env.example</code></li>

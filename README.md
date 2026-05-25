@@ -11,9 +11,11 @@
 <h2>📂 Структура проекта</h2>
 
 <pre>
-├── docker/                              # Docker configuration
+├── docker/                             # Docker configuration
 ├── src/
 │   ├── app/
+│   │   ├── Console/
+│   │   │   ├── Commands/               # FetchRandomJokeCommand
 │   │   ├── Http/
 │   │   │   ├── Controllers/
 │   │   │   │   ├── Api/                # JokeController, VisitController
@@ -98,6 +100,9 @@
     <pre><code>http://localhost:8080</code></pre>
   </li>
 </ol>
+
+<h2>⚠️ Важно:</h2>
+<p>Первый запуск может занять несколько минут, так как Docker скачивает образы и устанавливает зависимости.</p>
 
 <br>
 

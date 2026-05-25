@@ -19,6 +19,8 @@ php artisan key:generate --force
 
 php artisan migrate --force
 
+php artisan db:seed --force
+
 if [ ! -d node_modules ]; then
     npm install
 fi

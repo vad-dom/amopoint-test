@@ -154,7 +154,7 @@
 
 <p>Определение IP на backend через Laravel Request.</p>
 
-<p>GeoIP lookup для определения города и страны.</p>
+<p>Внешний GeoIP для определения города и страны.</p>
 
 <p>Парсинг User-Agent:</p>
 <ul>
@@ -163,9 +163,14 @@
   <li>device</li>
 </ul>
 
-<p>Страница статистики (тестовый пользователь для входа указан ниже):</p>
+<p>Страница статистики:</p>
 
 <pre><code>http://localhost:8080/stats</code></pre>
+
+<h3>Тестовый пользователь</h3>
+
+<code>Email: test@example.com</code><br>
+<code>Пароль: password</code>
 
 <p>Chart.js graphs:</p>
 <ul>
@@ -225,17 +230,6 @@ document.body.appendChild(script);
 <p>После этого новый visit появится в статистике:</p>
 
 <code>/stats</code>
-
-<br>
-
-<h2>🔐 Тестовый пользователь</h2>
-
-<pre><code>Email: test@example.com
-Password: password</code></pre>
-
-<p>Используется для входа на страницу статистики:</p>
-
-<pre><code>http://localhost:8080/stats</code></pre>
 
 <br>
 

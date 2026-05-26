@@ -190,27 +190,19 @@
 
 <ul>
   <li>
-    Главная страница:
-    <br>
-    <code>/</code>
+    Главная страница: <code>/</code>
   </li>
 
   <li>
-    API jokes:
-    <br>
-    <code>/api/jokes?limit=20</code>
+    API jokes: <code>/api/jokes?limit=20</code>
   </li>
 
   <li>
-    Страница статистики visits:
-    <br>
-    <code>/stats</code>
+    Страница статистики visits: <code>/stats</code>
   </li>
 
   <li>
-    Авторизация:
-    <br>
-    <code>/login</code>
+    Авторизация: <code>/login</code>
   </li>
 </ul>
 
@@ -228,9 +220,7 @@ script.src = 'https://amopoint-test-young-lantern-9332.fly.dev/js/visit-tracker.
 document.body.appendChild(script);
 </code></pre>
 
-<p>После этого новый visit появится в статистике:</p>
-
-<code>/stats</code>
+<p>После этого новый visit появится в статистике: <code>/stats</code></p>
 
 <br>
 

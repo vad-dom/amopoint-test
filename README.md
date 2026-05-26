@@ -1,4 +1,4 @@
-<h1>Amopoint Test Task</h1>
+<h1>AmoPoint Test Task</h1>
 
 <p>Тестовое задание на вакансию PHP-разработчика.</p>
 
@@ -108,25 +108,27 @@
 
 <h2>📘 Реализованные пункты задания</h2>
 
-<h3>1. Console command + JSON API</h3>
+<h3>1. Консольная команда + JSON API</h3>
 
-<ul>
-  <li>Laravel console command: <code>php artisan joke:fetch</code></li>
-  <li>Получение данных из external API:
-    <br>
-    <code>https://official-joke-api.appspot.com/random_joke</code>
-  </li>
-  <li>Автоматический запуск scheduler каждые 5 минут</li>
-  <li>Сохранение jokes в SQLite</li>
-  <li>JSON endpoint:
-    <br>
-    <code>GET /api/jokes?limit=20</code>
-  </li>
-</ul>
+<p>Laravel console command:</p>
+
+<pre><code>php artisan joke:fetch</code></pre>
+
+<p>Получение данных из внешнего API:</p>
+
+<pre><code>https://official-joke-api.appspot.com/random_joke</code></pre>
+
+<p>Автоматический запуск scheduler каждые 5 минут.</p>
+
+<p>Сохранение jokes в SQLite.</p>
+
+<p>JSON endpoint:</p>
+
+<pre><code>GET /api/jokes?limit=20</code></pre>
 
 <br>
 
-<h3>2. JavaScript task</h3>
+<h3>2. JS-фильтр полей формы</h3>
 
 <p>Решение находится в файле:</p>
 
@@ -138,53 +140,35 @@
 
 <p>Также можно использовать как browser console snippet.</p>
 
-<p>Алгоритм:</p>
-
-<ul>
-  <li>Отслеживается изменение поля "Тип"</li>
-  <li>Проверяются поля формы с атрибутом <code>name</code></li>
-  <li>Отображаются только поля, содержащие выбранный тип</li>
-  <li>Дополнительно скрываются spacer elements <code>&lt;p&gt;&amp;nbsp;&lt;/p&gt;</code></li>
-</ul>
-
 <br>
 
 <h3>3. Дополнительное задание — статистика посещений</h3>
 
+<p>JS tracker: <code>src/public/js/visit-tracker.js</code></p>
+
+<p>API endpoint:</p>
+
+<pre><code>POST /api/visits</code></pre>
+
+<p>Определение IP на backend через Laravel Request.</p>
+
+<p>GeoIP lookup для определения города и страны.</p>
+
+<p>Парсинг User-Agent:</p>
 <ul>
-  <li>JS tracker:
-    <br>
-    <code>src/public/js/visit-tracker.js</code>
-  </li>
+  <li>browser</li>
+  <li>platform</li>
+  <li>device</li>
+</ul>
 
-  <li>API endpoint:
-    <br>
-    <code>POST /api/visits</code>
-  </li>
+<p>Страница статистики:</p>
 
-  <li>Определение IP на backend через Laravel Request</li>
+<pre><code>http://localhost:8080/stats</code></pre>
 
-  <li>GeoIP lookup для определения города и страны</li>
-
-  <li>Парсинг User-Agent:
-    <ul>
-      <li>browser</li>
-      <li>platform</li>
-      <li>device</li>
-    </ul>
-  </li>
-
-  <li>Страница статистики:
-    <br>
-    <code>http://localhost:8080/stats</code>
-  </li>
-
-  <li>Chart.js graphs:
-    <ul>
-      <li>уникальные посещения по часам</li>
-      <li>разбиение посещений по городам</li>
-    </ul>
-  </li>
+<p>Chart.js graphs:</p>
+<ul>
+  <li>уникальные посещения по часам</li>
+  <li>разбиение посещений по городам</li>
 </ul>
 
 <br>

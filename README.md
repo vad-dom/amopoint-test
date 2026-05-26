@@ -144,7 +144,9 @@
 
 <h3>3. Дополнительное задание — статистика посещений</h3>
 
-<p>JS tracker: <code>src/public/js/visit-tracker.js</code></p>
+<p>JS tracker:</p>
+
+<pre><code>src/public/js/visit-tracker.js</code></pre>
 
 <p>API endpoint:</p>
 

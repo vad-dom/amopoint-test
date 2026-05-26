@@ -146,6 +146,9 @@ $request->ip()
 - отсутствие необходимости локальной GeoIP database;
 - достаточно для тестового задания.
 
+При работе через hosting/proxy GeoIP может определять город по IP прокси-сервера. 
+Для production потребовалась бы более точная настройка trusted proxies / headers.
+
 ---
 
 ## jenssegers/agent для User-Agent parsing

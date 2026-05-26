@@ -163,7 +163,7 @@
   <li>device</li>
 </ul>
 
-<p>Страница статистики:</p>
+<p>Страница статистики (тестовый пользователь для входа указан ниже):</p>
 
 <pre><code>http://localhost:8080/stats</code></pre>
 
@@ -172,6 +172,59 @@
   <li>уникальные посещения по часам</li>
   <li>разбиение посещений по городам</li>
 </ul>
+
+<br>
+<h2>🌐 Проверка deployed версии (Fly.io)</h2>
+
+<p>Проект также развернут на Fly.io:</p>
+
+<code>https://amopoint-test-young-lantern-9332.fly.dev/</code>
+
+<h3>Что можно проверить</h3>
+
+<ul>
+  <li>
+    Главная страница:
+    <br>
+    <code>/</code>
+  </li>
+
+  <li>
+    API jokes:
+    <br>
+    <code>/api/jokes?limit=20</code>
+  </li>
+
+  <li>
+    Страница статистики visits:
+    <br>
+    <code>/stats</code>
+  </li>
+
+  <li>
+    Авторизация:
+    <br>
+    <code>/login</code>
+  </li>
+</ul>
+
+<h3>Тестовый пользователь</h3>
+
+<code>Email: test@example.com</code><br>
+<code>Пароль: password</code>
+
+<h3>Проверка visit-tracker.js</h3>
+
+<p>На любом внешнем сайте открыть DevTools → Console и выполнить:</p>
+
+<pre><code>const script = document.createElement('script');
+script.src = 'https://amopoint-test-young-lantern-9332.fly.dev/js/visit-tracker.js?v=' + Date.now();
+document.body.appendChild(script);
+</code></pre>
+
+<p>После этого новый visit появится в статистике:</p>
+
+<code>/stats</code>
 
 <br>
 

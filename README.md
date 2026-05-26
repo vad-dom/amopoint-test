@@ -223,7 +223,7 @@
 <p>На любом внешнем сайте открыть DevTools → Console и выполнить:</p>
 
 <pre><code>const script = document.createElement('script');
-script.src = 'https://amopoint-test-young-lantern-9332.fly.dev/js/visit-tracker.js?v=' + Date.now();
+script.src = 'https://amopoint-test-young-lantern-9332.fly.dev/js/visit-tracker.js';
 document.body.appendChild(script);
 </code></pre>
 

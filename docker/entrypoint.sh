@@ -11,7 +11,12 @@ if [ ! -d vendor ]; then
     composer install --no-interaction --prefer-dist --optimize-autoloader
 fi
 
-if [ ! -f database/database.sqlite ]; then
+if [ "$DB_DATABASE" = "/data/database.sqlite" ]; then
+    mkdir -p /data
+    touch /data/database.sqlite
+    chown -R www-data:www-data /data
+    chmod -R ug+rw /data
+else
     touch database/database.sqlite
 fi
 
@@ -27,9 +32,20 @@ fi
 
 npm run build
 
-php artisan storage:link || true
+if [ ! -L public/storage ]; then
+    php artisan storage:link
+fi
+
+mkdir -p storage/framework/{cache,sessions,views}
+mkdir -p storage/logs
+mkdir -p bootstrap/cache
 
 chown -R www-data:www-data storage bootstrap/cache database
+
+if [ -d /data ]; then
+    chown -R www-data:www-data /data
+    chmod -R ug+rw /data
+fi
 
 php artisan schedule:work > /tmp/scheduler.log 2>&1 &
 

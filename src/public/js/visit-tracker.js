@@ -1,5 +1,12 @@
 (() => {
-    const endpoint = 'http://localhost:8080/api/visits';
+    const currentScript = document.currentScript;
+
+    if (!currentScript) {
+        return;
+    }
+
+    const scriptUrl = new URL(currentScript.src);
+    const endpoint = `${scriptUrl.origin}/api/visits`;
 
     const payload = {
         page_url: window.location.href,

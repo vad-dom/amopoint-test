@@ -2,6 +2,8 @@ FROM php:8.4-apache-bookworm
 
 WORKDIR /var/www/html
 
+COPY src/ /var/www/html/
+
 RUN apt-get update \
     && apt-get install -y \
         git \

@@ -2,9 +2,8 @@
 
 namespace App\Console\Commands;
 
-use App\Services\JokeService;
+use App\Jobs\FetchRandomJokeJob;
 use Illuminate\Console\Command;
-use Throwable;
 
 class FetchRandomJokeCommand extends Command
 {
@@ -20,20 +19,17 @@ class FetchRandomJokeCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Fetch random joke from external API and save it to database';
+    protected $description = 'Dispatch job to fetch random joke from external API and save it to database';
 
     /**
      * Execute the console command.
+     *
+     * @return int
      */
-    public function handle(JokeService $jokeService): int
+    public function handle(): int
     {
-        try {
-            $joke = $jokeService->saveApiJokeData();
-            $this->info("Joke #{$joke->external_id} saved successfully.");
-            return self::SUCCESS;
-        } catch (Throwable $e) {
-            $this->error($e->getMessage());
-            return self::FAILURE;
-        }
+        FetchRandomJokeJob::dispatch();
+        $this->info('Fetch random joke job dispatched.');
+        return self::SUCCESS;
     }
 }

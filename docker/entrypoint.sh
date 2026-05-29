@@ -49,4 +49,6 @@ fi
 
 php artisan schedule:work > /tmp/scheduler.log 2>&1 &
 
+php artisan queue:work --tries=3 > /tmp/queue.log 2>&1 &
+
 exec "$@"
